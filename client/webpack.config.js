@@ -23,8 +23,8 @@ module.exports = () => {
       }),
 
       new InjectManifest({
-        swSrc: '',
-        swDest: ''
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js'
       }),
 
       new WebpackPwaManifest({
@@ -99,6 +99,7 @@ module.exports = () => {
 
     module: {
       rules: [
+
 
         /*
           TODO: In this array, we need to configure the rules 
