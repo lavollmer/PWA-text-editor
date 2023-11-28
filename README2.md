@@ -36,11 +36,7 @@ Technical requirements for the application include:
   <a id="credits"></a>
 ## Credits
 
-This project was done in conjunction with the U of MN Bootcamp Fall 2023.
-
-Tutoring services were used to help debug, help with logic and coding. 
-
-Gary Almes, coding instructor, provided starter code and logic for this project.
+This project was done in conjunction with the U of MN Bootcamp Fall 2023. Gary Almes, coding instructor, provided starter code and logic for this project.
 
   <a id="license"></a>
 
