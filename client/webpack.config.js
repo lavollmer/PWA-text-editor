@@ -16,55 +16,83 @@ module.exports = () => {
     },
 
     plugins: [
-
-    /*
-      TODO:
-
-      We need to configure some plugins for Wepack to use. They 
-      have already been required in above.
-
-      Note that the plugins property on line 18 is an array. The 
-      standard way to config a plugin is to instantiate one plugin
-      for each item in this array. So if we have three plugins to 
-      configure, the plugins array should have three sets of objects 
-      being instantiated.
-
-      Instantiating a plugin looks like this:
-
-      new PLUGIN_NAME_HERE({
-        // object keys and values go here
+      //webpack plugin
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'J.A.T.E'
       }),
 
-      So, below, we will be configuring HtmlWebpackPlugin, InjectManifest, 
-      and WebpackPwaManifest.
+      new InjectManifest({
+        swSrc: '',
+        swDest: ''
+      }),
 
-      For HtmlWebpackPlugin, we want to specify the template as './index.html' 
-      and the title as 'J.A.T.E'
-
-      For InjectManifest plugin, the swSrc should be './src-sw.js' and the 
-      swDest should be 'src-sw.js'
-
-      For WebpackPwaManifest, we'll need the following values set in the config 
-      object:
-
-      fingerprints should be false
-      inject should be true
-      name should be 'Just Another Text Editor'
-      short_name should be 'J.A.T.E'
-      description can be anything you like. This is an app that creates a text editor, so write something suitable.
-      background_color and theme_color should be '#225ca3'
-      start_url and publicPath should be  '/'
-      icons should be:
-          [
-            {
-              src: path.resolve('src/images/logo.png'),
-              sizes: [96, 128, 192, 256, 384, 512],
-              destination: path.join('assets', 'icons'),
-            },
-          ]
-
-      When all three plugins are configured this work is done.
-    */
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'Just Another Text Editor',
+        short_name: 'J.A.T.E',
+        description: 'An app that creates a text editor',
+        background_color: '#225ca3',
+        theme_color: '#225ca3',
+        start_URL: './',
+        public_path: './',
+        icons: [
+          {
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          }
+        ]
+      })
+      /*
+        TODO:
+  
+        We need to configure some plugins for Wepack to use. They 
+        have already been required in above.
+  
+        Note that the plugins property on line 18 is an array. The 
+        standard way to config a plugin is to instantiate one plugin
+        for each item in this array. So if we have three plugins to 
+        configure, the plugins array should have three sets of objects 
+        being instantiated.
+  
+        Instantiating a plugin looks like this:
+  
+        new PLUGIN_NAME_HERE({
+          // object keys and values go here
+        }),
+  
+        So, below, we will be configuring HtmlWebpackPlugin, InjectManifest, 
+        and WebpackPwaManifest.
+  
+        For HtmlWebpackPlugin, we want to specify the template as './index.html' 
+        and the title as 'J.A.T.E'
+  
+        For InjectManifest plugin, the swSrc should be './src-sw.js' and the 
+        swDest should be 'src-sw.js'
+  
+        For WebpackPwaManifest, we'll need the following values set in the config 
+        object:
+  
+        fingerprints should be false
+        inject should be true
+        name should be 'Just Another Text Editor'
+        short_name should be 'J.A.T.E'
+        description can be anything you like. This is an app that creates a text editor, so write something suitable.
+        background_color and theme_color should be '#225ca3'
+        start_url and publicPath should be  '/'
+        icons should be:
+            [
+              {
+                src: path.resolve('src/images/logo.png'),
+                sizes: [96, 128, 192, 256, 384, 512],
+                destination: path.join('assets', 'icons'),
+              },
+            ]
+  
+        When all three plugins are configured this work is done.
+      */
 
 
     ],
