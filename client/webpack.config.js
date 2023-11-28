@@ -98,20 +98,38 @@ module.exports = () => {
     ],
 
     module: {
+      // rules: [
+
+
+      //   /*
+      //     TODO: In this array, we need to configure the rules 
+      //     for when Webpack should "bundle-ize" our files. Each rule 
+      //     is an object. We will be setting up two rules. 
+
+      //     You will find both rules in the solution for the mini 
+      //     project. 
+
+      //     When you copy and paste them below, you'll be done here.
+      //   */
+
+      // ],
       rules: [
-
-
-        /*
-          TODO: In this array, we need to configure the rules 
-          for when Webpack should "bundle-ize" our files. Each rule 
-          is an object. We will be setting up two rules. 
-          
-          You will find both rules in the solution for the mini 
-          project. 
-
-          When you copy and paste them below, you'll be done here.
-        */
-
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.m?js$/,
+          exclude: /node_modules/,
+          // We use babel-loader in order to use ES6.
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            },
+          },
+        },
       ],
     },
   };
