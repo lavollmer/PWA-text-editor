@@ -13,11 +13,10 @@ This project was to properly configure and update a website to be a functional P
 - [License](#license)
 
   <a id="pwa"></a>
-## POSTMAN
+## PWA
 
 PWA Page:
 ![Preview PWA Screenshot]()
-
 
   <a id="websitelinks"></a>
 ## Website Links
