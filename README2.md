@@ -32,6 +32,8 @@ Technical requirements for the application include:
 * PWAs
 * Webpack
 * Heroku
+* Express
+* Nodemon
 
   <a id="credits"></a>
 ## Credits
