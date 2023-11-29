@@ -2,7 +2,7 @@
 
 ## Description
 
-This project was to properly configure and update a website to be a functional PWA. A PWA is able to run on multiple platforms online and offline.
+This project was to properly configure and update a website to be a functional PWA. A PWA is able to run on multiple platforms online and offline. Benefits of PWAs include: offline function, optimizing webpages, and single codebase.
 
 ## Table of Contents
 
