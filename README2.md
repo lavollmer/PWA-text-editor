@@ -24,7 +24,7 @@ PWA Page:
 
 * Github Repo:https://github.com/lavollmer/PWA-text-editor
 
-* Heroku Deployment: 
+* Heroku Deployment: https://pwas-text-editor-46b7c75bdb24.herokuapp.com/
 
   <a id="technicalrequirements"></a>
 ## Technical Requirements
